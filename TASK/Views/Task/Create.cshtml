@@ -1,0 +1,47 @@
+﻿@model Taskk
+
+@{
+    ViewData["Title"] = "Add a new Task";
+}
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Add Task</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label" style="font-size: 1.4em;"></label>
+                        <input asp-for="Name" class="form-control" style="margin-top: 0.5em;" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label" style="font-size: 1.4em;"></label>
+                        <input asp-for="Description" class="form-control" style="margin-top: 0.5em;" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeadLine" class="control-label" style="font-size: 1.4em;"></label>
+                        <input asp-for="DeadLine" class="form-control" style="margin-top: 0.5em;" />
+                        <span asp-validation-for="DeadLine" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Status" class="control-label" style="font-size: 1.4em;"></label>
+                        <select asp-for="Status" class="form-control" style="margin-top: 0.5emem;">
+                            <option value="E kryer">E kryer</option>
+                            <option value="E Dorezuar">E Dorezuar</option>
+                            <option value="Ne progres">Ne progres</option>
+                        </select>
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="display-flex">
+                        <input type="submit" value="Submit" class="btn btn-outline-success float-right" style="margin-top: 1em; margin-bottom: 2em;" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

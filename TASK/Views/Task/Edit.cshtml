@@ -1,0 +1,50 @@
+﻿@model Taskk 
+
+@{
+    ViewData["Title"] = "Edid Your Task";
+
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Eddit Task</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group text-left">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" style="margin-top: 0.5em;" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" style="margin-top: 0.5e;" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeadLine" class="control-label"></label>
+                        <input asp-for="DeadLine" class="form-control" style="margin-top: 0.5e;" />
+                        <span asp-validation-for="DeadLine" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Status" class="control-label"></label>
+                        <select asp-for="Status" class="form-control" style="margin-top: 0.5e;">
+                            <option value="E kryer">E kryer</option>
+                            <option value="E Dorezuar">E Dorezuar </option>
+                            <option value="Ne progres">Ne progres</option>
+                        </select>
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submmit" class="btn btn-outline-success float-right" style="margin-top: 1em; margin-bottom: 2em;" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
